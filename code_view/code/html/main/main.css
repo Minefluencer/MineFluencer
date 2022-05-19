@@ -1,10 +1,26 @@
+:root {
+	--vivid-sky-blue: #3cf;
+	--manatee: #9c9fab;
+	--cultured: #f4f4f6;
+	--eerie-black: #1c1d21;
+	--light-gray: #d3d4d9;
+	--black-coral: #676b79;
+	--han-purple: #33f;
+	--ghost-white: #fbfbff;
+	--lavender-web: #e7e7ff;
+	--white: #fff;
+	--rusty-red: #de3c4b;
+}
+
 #container > header {
 	height: 57rem;
-	background-color: red;
+	position: relative;
+	background-image: url(../image/main_banner.jpg);
+	object-fit: cover;
 }
 
 #container > header > #nav {
-	background-color: aliceblue;
+	background-color: rgba(0, 0, 137, 0.04);
 }
 
 #container > header > #nav > nav {
@@ -36,10 +52,13 @@
 
 .nav_left > h1 > #mine {
 	margin-left: 1.3rem;
+	color: var(--han-purple);
 }
 
 .nav_left > h1 > #mine > span {
 	font-weight: normal;
+	font-size: 1.9rem;
+	color: var(--black-coral);
 }
 
 .nav_left > ul {
@@ -53,6 +72,7 @@
 .nav_left > ul > li > a {
 	font-size: 1.8rem;
 	font-weight: bold;
+	color: var(--black-coral);
 }
 
 .nav_right {
@@ -68,12 +88,60 @@
 	font-weight: bold;
 }
 
+.nav_right > img {
+	width: 3.2rem;
+	height: 3.2rem;
+	margin-left: 5rem;
+	cursor: pointer;
+}
+
 .nav_right > #join {
 	padding: 1.2rem 1.5rem;
-	background-color: purple;
+	background-color: var(--han-purple);
 	border-radius: 1rem;
 }
 
 .nav_right > #join > a {
 	color: #fff;
+}
+
+header > .category {
+	position: absolute;
+	bottom: -10rem;
+	left: calc(50% - 65rem);
+	width: 130rem;
+	background-color: var(--white);
+	box-shadow: 0 0.5rem 2rem rgba(28, 29, 33, 0.04);
+	border-radius: 1rem;
+	padding: 0 0.5rem;
+}
+
+header > .category > ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 18.8rem;
+}
+
+header > .category > ul li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.category > ul li > .arrow {
+	background-color: rgba(0, 0, 137, 0.04);
+	opacity: 0.6;
+	border-radius: 50%;
+}
+
+.category > ul li > .arrow_left {
+	margin-left: 3rem;
+	transform: rotate(180deg);
+}
+
+.category > ul li > .arrow_right {
+	margin-right: 3rem;
 }
