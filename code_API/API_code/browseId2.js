@@ -1,0 +1,61 @@
+// 순서 1)
+// => youtube의 browseId 를 담는다.
+// => 꼭 문자열 타입으로 담는다
+// => Id옆에는 주석문으로 유튜버의 이름(채널명)을 적는다
+
+// => 주소만 적어주면 바로 유튜버가 추가된다 (코드만 작성하면 됨)
+
+let browseKey = [
+	'UC9gxOp_-R78phMHmv2bW_sg',
+	'UCaoqDZPllYXLAH_5OBRLLrw',
+	'UCxU8QX7IRRIW0VLuoWWoxbw',
+	'UCEDPUUcT-hiAO3Crp1Q2MUw',
+	'UCugz3-UlkX2P77PtK1Ju0RA',
+	'UCNAdXHkMg3U4xmrU9eyg1Ww',
+	'UCtupKg-bVtyq2oWNQnLLCeA',
+	'UCQIzK71R7gDpwSoz44GNi7w',
+	'UCIec2gFn71kaW1gX0rw-jKw',
+	'UCJh7YJLH8MaJQZxzMYS-gqg',
+	'UCdtRAcd3L_UpV4tMXCw63NQ',
+	'UChWJavW1PbvAkPTcB06EeIg',
+	'UCoyogo_Fg-Z5jDOQz6Rt6eA',
+	'UCxM_KJ601hwrOpjVC07iMVQ',
+	'UCYJDUekoQz0-bo8al1diLWQ',
+	'UCN2YKTP1vgg-hVGuVO_W8Zw',
+	'UCJYdXaZ-6HK7mzacgas56Dg',
+	'UCUsfRCHj5U1wAJEJiQpPLPw',
+	'UCxHcczukcG21up2MBe8yP_Q',
+	'UCMY_lKUu8yGZaVsu_9lPIGg',
+	'UCQ4eZwsMew7ZaV_HKXnQLGg',
+	'UCHHGX6n-7T01PV9P2zquXvA',
+	'UCfDkQiPchwM0F2SkHWl5JYQ',
+	'UC4yq3FWEWqMvFNFBsV3gbKQ',
+	'UC2WZ-lHHSOI81g2Jp4BpsWA',
+	'UCBaf_e26fqirvbTAX2H40Hg',
+	'UCpg89Ys3E4BaLGgEEWVmI9g',
+	'UC3hRpIQ4x5niJDwjajQSVPg',
+	'UCdcEpfd6OZzTqRuX9wSFXaQ',
+	'UCkTRKCuFrRiXQm_gMG1uDvg',
+	'UCXXlcPH1stsP3VwYG90s4wg',
+	'UCRGsjyoWMDA3uiZ3lMgXplg',
+	'UC8a6z7i9qypp9PqJ_0HhBrw',
+	'UCcSepD5GRKpskptBW2TSKGg',
+	'UCbOwqHbQf0uspeRe7lY8e6Q',
+	'UCYJlyU_Lf33eqp6KWYONTGg',
+	'UCkGLGs2ZCNRSlOs9s-8S_qA',
+	'UCSrRZH9QT6li5PIAv0r_6QA',
+	'UCb3RcfZTXh4_ZMZy-sLaLPw',
+	'UCcRTcy_GuofiJLPLMlVcGxw',
+	'UCN5TxY0WwQM8xUl2daYzgFA',
+	'UCPV-ljQQruNo28I5JFElyAA',
+	'UC2DHU9RPlx9DpY0pMfL7jBg',
+	'UCDhAiu2aYWUoUYM7TJkkRcA',
+	'UCTdMHmzV9J5gihbNrnuqEvA',
+	'UCEeEvBzuFze0gMn0FF55h8w',
+	'UCoIQWK9QUepD-MnxNA4QLuA',
+	'UCKWv0ScT6PpZcpg7ivUVWLA',
+	'UCjD3iAk_WIUkiUk1tHYP9Cw',
+	'UC9gW47NqzI1x7e8qsflvUUw',
+];
+
+export { browseKey };
