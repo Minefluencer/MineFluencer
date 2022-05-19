@@ -1,0 +1,79 @@
+#container > header {
+	height: 57rem;
+	background-color: red;
+}
+
+#container > header > #nav {
+	background-color: aliceblue;
+}
+
+#container > header > #nav > nav {
+	width: 130rem;
+	margin: 0 auto;
+	height: 9rem;
+	display: flex;
+	align-items: center;
+}
+
+.nav_left {
+	width: 65rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_left > h1 {
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.nav_left > h1 > img {
+	width: 6.7rem;
+	height: 3.4rem;
+	object-fit: contain;
+}
+
+.nav_left > h1 > #mine {
+	margin-left: 1.3rem;
+}
+
+.nav_left > h1 > #mine > span {
+	font-weight: normal;
+}
+
+.nav_left > ul {
+	display: flex;
+}
+
+.nav_left > ul > li {
+	margin-left: 8rem;
+}
+
+.nav_left > ul > li > a {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.nav_right {
+	width: 65rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav_right > span {
+	margin-left: 6.1rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.nav_right > #join {
+	padding: 1.2rem 1.5rem;
+	background-color: purple;
+	border-radius: 1rem;
+}
+
+.nav_right > #join > a {
+	color: #fff;
+}
