@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 :root {
 	--vivid-sky-blue: #3cf;
 	--manatee: #9c9fab;
@@ -12,136 +13,81 @@
 	--rusty-red: #de3c4b;
 }
 
-#container > header {
-	height: 57rem;
-	position: relative;
-	background-image: url(../image/main_banner.jpg);
-	object-fit: cover;
-}
+/* now_popularity (지금 인기있는 인플루언서) */
 
-#container > header > #nav {
-	background-color: rgba(0, 0, 137, 0.04);
-}
-
-#container > header > #nav > nav {
+main > .now_popularity {
 	width: 130rem;
+	height: 38rem;
 	margin: 0 auto;
-	height: 9rem;
+	margin-top: 14.4rem;
 	display: flex;
-	align-items: center;
 }
 
-.nav_left {
-	width: 65rem;
+main > .now_popularity > .now_left {
+	width: 42rem;
+	height: 31rem;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 }
 
-.nav_left > h1 {
-	display: flex;
-	align-items: center;
-	font-size: 2rem;
+main > .now_popularity > .now_left > h1 {
+	font-size: 3.2rem;
+	font-weight: 400;
+	color: var(--eerie-black);
 }
 
-.nav_left > h1 > img {
-	width: 6.7rem;
-	height: 3.4rem;
-	object-fit: contain;
+main > .now_popularity > .now_left > h1 > span {
+	font-weight: bold;
+	color: var(--eerie-black);
 }
 
-.nav_left > h1 > #mine {
-	margin-left: 1.3rem;
+main > .now_popularity > .now_left > h1 > #now_main {
 	color: var(--han-purple);
 }
 
-.nav_left > h1 > #mine > span {
-	font-weight: normal;
-	font-size: 1.9rem;
-	color: var(--black-coral);
-}
-
-.nav_left > ul {
-	display: flex;
-}
-
-.nav_left > ul > li {
-	margin-left: 8rem;
-}
-
-.nav_left > ul > li > a {
-	font-size: 1.8rem;
-	font-weight: bold;
-	color: var(--black-coral);
-}
-
-.nav_right {
-	width: 65rem;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.nav_right > span {
-	margin-left: 6.1rem;
-	font-size: 1.8rem;
-	font-weight: bold;
-}
-
-.nav_right > img {
-	width: 3.2rem;
-	height: 3.2rem;
-	margin-left: 5rem;
-	cursor: pointer;
-}
-
-.nav_right > #join {
-	padding: 1.2rem 1.5rem;
-	background-color: var(--han-purple);
-	border-radius: 1rem;
-}
-
-.nav_right > #join > a {
-	color: #fff;
-}
-
-header > .category {
-	position: absolute;
-	bottom: -10rem;
-	left: calc(50% - 65rem);
-	width: 130rem;
-	background-color: var(--white);
-	box-shadow: 0 0.5rem 2rem rgba(28, 29, 33, 0.04);
-	border-radius: 1rem;
-	padding: 0 0.5rem;
-}
-
-header > .category > ul {
+main > .now_popularity > .now_left > .now_controll {
+	width: 32rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 18.8rem;
 }
 
-header > .category > ul li {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
+.now_left > .now_controll > .now_arrow > .arrow {
+	width: 3.5rem;
+	height: 3.5rem;
 }
 
-.category > ul li > .arrow {
-	background-color: rgba(0, 0, 137, 0.04);
-	opacity: 0.6;
-	border-radius: 50%;
-}
-
-.category > ul li > .arrow_left {
-	margin-left: 3rem;
+.now_left > .now_controll > .now_arrow > .arrow_left {
+	margin-right: 2rem;
 	transform: rotate(180deg);
 }
 
-.category > ul li > .arrow_right {
-	margin-right: 3rem;
+.now_left > .now_controll > .now_arrow > .arrow_active {
+	opacity: 0.5;
+}
+
+.now_left > .now_controll > .now_more > span > a {
+	font-size: 1.4rem;
+	font-weight: normal;
+	color: var(--han-purple);
+}
+
+.now_left > .now_controll > .now_more > span > a:hover {
+	text-decoration: underline;
+}
+
+main > .now_popularity > .now_right {
+	width: 88rem;
+	height: 38rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main > .now_popularity > .now_right > .pop_card {
+	width: 37rem;
+	height: 35rem;
+	background-color: red;
 }

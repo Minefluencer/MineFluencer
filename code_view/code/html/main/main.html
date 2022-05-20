@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="header.css" />
 		<link rel="stylesheet" href="main.css" />
 		<title>마인플루언서</title>
 	</head>
@@ -31,22 +32,84 @@
 					</nav>
 				</div>
 				<div class="main_banner">
-					<!-- 다가오는 여름날 텍스트는 포토샵으로 글자 넣는게 어떨까요? -->
+					<div class="banner_text">
+						<p>다가오는 여름날을 위한</p>
+						<h1>나만의 퍼스널 트레이너</h1>
+						<p id="hashtag">
+							<a href="#">#운동 <span id="hash_style">분야의</span> LOVELY SWIMMER</a>
+						</p>
+					</div>
 				</div>
 				<div class="category">
 					<ul>
 						<li><img src="../image/ic_arrow.svg" alt="왼쪽 이동" class="arrow arrow_left" /></li>
-						<li><img src="../image/traning.svg" alt="" /><span>운동</span></li>
+						<li><img src="../image/traning.svg" alt="" /><span class="category_active">운동</span></li>
 						<li><img src="../image/travel.svg" alt="" /><span>여행</span></li>
 						<li><img src="../image/beauty.svg" alt="" /><span>뷰티</span></li>
 						<li><img src="../image/fashion.svg" alt="" /><span>패션</span></li>
 						<li><img src="../image/food.svg" alt="" /><span>먹방</span></li>
 						<li><img src="../image/cook.svg" alt="" /><span>요리</span></li>
 						<li><img src="../image/ic_arrow.svg" alt="오른쪽 이동" class="arrow arrow_right" /></li>
-						<!-- 먹방, 요리, arrow 아이콘은 다시 찾아보는게 좋을거 같습니다. padding 을 줘서 클릭 시 background 만 변경되게 하면 좋을거같아요 -->
 					</ul>
 				</div>
 			</header>
+			<main>
+				<div class="now_popularity">
+					<div class="now_left">
+						<h1>
+							<span id="now_main">운동</span> 분야<br />
+							<span>지금 인기</span>있는 인플루언서
+						</h1>
+						<div class="now_controll">
+							<div class="now_arrow">
+								<img src="../image/ic_arrow.svg" alt="왼쪽으로 이동" class="arrow arrow_left arrow_active" />
+								<img src="../image/ic_arrow.svg" alt="오른쪽으로 이동" class="arrow arrow_right" />
+							</div>
+							<div class="now_more">
+								<span><a href="#">더 보기</a></span>
+							</div>
+						</div>
+					</div>
+					<div class="now_right">
+						<div class="pop_card">
+							<img src="../image/logo.svg" alt="인플루언서" />
+							<div class="pop_text">
+								<h3>LOVELY SWIMMER</h3>
+								<span>구독자 21.8 만명</span>
+								<div class="pop_hashtag">
+									<span>#운동</span>
+									<span>#패션</span>
+									<span>#여행</span>
+								</div>
+							</div>
+						</div>
+						<div class="pop_card">
+							<img src="../image/logo.svg" alt="인플루언서" />
+							<div class="pop_text">
+								<h3>LOVELY SWIMMER</h3>
+								<span>구독자 21.8 만명</span>
+								<div class="pop_hashtag">
+									<span>#운동</span>
+									<span>#패션</span>
+									<span>#여행</span>
+								</div>
+							</div>
+						</div>
+						<div class="pop_card">
+							<img src="../image/logo.svg" alt="인플루언서" />
+							<div class="pop_text">
+								<h3>LOVELY SWIMMER</h3>
+								<span>구독자 21.8 만명</span>
+								<div class="pop_hashtag">
+									<span>#운동</span>
+									<span>#패션</span>
+									<span>#여행</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 		</div>
 	</body>
 </html>
