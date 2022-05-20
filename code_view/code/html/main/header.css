@@ -17,7 +17,7 @@
 	height: 57rem;
 	position: relative;
 	background-image: url(../image/main_banner.jpg);
-	object-fit: cover;
+	background-size: cover;
 }
 
 #container > header > #nav {
