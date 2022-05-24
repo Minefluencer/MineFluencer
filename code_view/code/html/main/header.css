@@ -27,6 +27,7 @@
 	top: 0%;
 	z-index: 999;
 	transition: all 0.3s ease-in-out;
+	border-bottom: 1px solid #d3d4d9;
 }
 
 #container > header > .nav_active {
