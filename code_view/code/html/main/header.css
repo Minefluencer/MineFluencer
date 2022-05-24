@@ -20,11 +20,20 @@
 	background-size: cover;
 }
 
-#container > header > #nav {
-	background-color: rgba(0, 0, 137, 0.04);
+#container > header > .nav {
+	width: 100%;
+	background-color: rgba(251, 251, 255, 0.5);
+	position: fixed;
+	top: 0%;
+	z-index: 999;
+	transition: all 0.3s ease-in-out;
 }
 
-#container > header > #nav > nav {
+#container > header > .nav_active {
+	background-color: var(--white);
+}
+
+#container > header > .nav > nav {
 	width: 130rem;
 	margin: 0 auto;
 	height: 9rem;
@@ -120,7 +129,7 @@ header > .main_banner {
 
 header > .main_banner > .banner_text {
 	height: 57rem;
-	margin-top: 8rem;
+	margin-top: 18rem;
 }
 
 .main_banner > .banner_text > p,
