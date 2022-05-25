@@ -13,6 +13,10 @@
 	--rusty-red: #de3c4b;
 }
 
+* {
+	scroll-behavior: smooth;
+}
+
 #container > header {
 	height: 57rem;
 	position: relative;
