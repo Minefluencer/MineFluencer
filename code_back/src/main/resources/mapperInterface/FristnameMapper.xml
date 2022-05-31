@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="mapperInterface.FristnameMapper">
+  
+  <select id="givenick" resultType="vo.FristnameVO">
+select distinct concat((select firstname from nick where firstname is not null 	order by rand() limit 1),
+(select lastname from nick where lastname is not null order by rand() limit 1))as nick_name , counting 
+from nick;
+  </select>
+  
+  </mapper>
