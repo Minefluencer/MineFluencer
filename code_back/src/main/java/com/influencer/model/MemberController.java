@@ -26,6 +26,13 @@ import service.MemberService;
 import service.YtubeService;
 import vo.FirstnameVO;
 import vo.MemberVO;
+/*
+ * 2022 - 05 - 26
+ * Last update 최성림
+ * login 
+ * logout
+ * check(idGet, pwGet)
+ * */
 import vo.YtubeVO;
 
 
@@ -164,20 +171,19 @@ public class MemberController{
 	
 	@RequestMapping(value = "/join" , method = RequestMethod.POST)
 	@ResponseBody
-	public ModelAndView join (ModelAndView mv, HttpServletRequest request, 
-							   MemberVO vo)throws Exception {
+	public ModelAndView join (ModelAndView mv, HttpServletRequest request, MemberVO vo)throws Exception {
 		vo.setEmail(vo.getEmail().replace("%40","@"));
 		List<FirstnameVO>nickname = Fservice.givenick();
 		if(Service.insert(vo)>0) {
 			Fservice.countUpdate(nickname.get(cnt).getNick_name());
 			cnt++;
-			mv.addObject("result", "회원가입 완료");
+			mv.addObject("result", "200");
 			mv.setViewName("member/login");
 		}else {
-			mv.addObject("result", "회원가입 오류 다시하세요");
+			mv.addObject("result", "201");
 			mv.setViewName("member/join");
 		}
-		
+		System.out.println(mv);
 		return mv;
 		
 	}

@@ -66,15 +66,16 @@ $('#submit_btn').click(() => {
 		}
 	$.ajax({
 		url : 'join',
-		type : 'Post',
+		type : 'POST',
 		charset : "UTF-8",
 		data : formData,
-		async : false,
-		success : (function (result) {
-			window.self(result);
+		success : ((result)=>{
+			if(result == '200')
+			alert('회원가입이 되었습니다.');
+			window.open('login',"_self");
 		}),
-		error:()=>{
-			alert("서버에러")
-		}
-	})
+		error : (()=>{
+			id.focus();
+		})
+	});
 });
