@@ -1,5 +1,6 @@
 package service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +17,19 @@ public class MemberServiceImpl implements MemberService{
 	
 	@Override
 	public List<MemberVO> imgOne(String string) {
-		// TODO Auto-generated method stub
 		return mapper.imgOne(string);
 	}
 	@Override
 	public MemberVO selectOne(MemberVO vo) {
-		// TODO Auto-generated method stub
 		return mapper.selectOne(vo);
 	}
 	@Override
 	public int insert(MemberVO vo) {
 		return mapper.insert(vo);
+	}
+	@Override
+	public MemberVO getAll(HashMap<String,Object> map) {
+		return mapper.getAll(map);
 	}
 
 }
