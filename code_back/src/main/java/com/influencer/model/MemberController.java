@@ -26,13 +26,6 @@ import service.MemberService;
 import service.YtubeService;
 import vo.FirstnameVO;
 import vo.MemberVO;
-/*
- * 2022 - 05 - 26
- * Last update 최성림
- * login 
- * logout
- * check(idGet, pwGet)
- * */
 import vo.YtubeVO;
 
 
