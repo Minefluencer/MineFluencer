@@ -1,0 +1,16 @@
+<svg width="84" height="85" viewBox="0 0 84 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="42" cy="42.002" r="42" fill="#F4F4F6"/>
+    <g clip-path="url(#ba77jzfw9a)" fill="#1C1D21">
+        <g opacity=".4">
+            <path d="M60.927 36.764a1.25 1.25 0 0 1 .573 2.237L57 42.377V39.25l3-2.25a1.25 1.25 0 0 1 .927-.237zM24 37.002l3 2.25v3.124l-4.5-3.374a1.25 1.25 0 0 1 1.5-2z"/>
+        </g>
+        <path d="M34.75 30.002v-2.75a1.25 1.25 0 1 1 2.5 0v2.75a1.25 1.25 0 0 1-2.5 0zm7.25 1.25a1.25 1.25 0 0 0 1.25-1.25v-2.75a1.25 1.25 0 1 0-2.5 0v2.75a1.25 1.25 0 0 0 1.25 1.25zm6 0a1.25 1.25 0 0 0 1.25-1.25v-2.75a1.25 1.25 0 1 0-2.5 0v2.75a1.25 1.25 0 0 0 1.25 1.25z"/>
+        <path opacity=".6" fill-rule="evenodd" clip-rule="evenodd" d="M27 51.002v.75a5.015 5.015 0 0 0 5 5h20a5.016 5.016 0 0 0 5-5v-.75H27z"/>
+        <path opacity=".4" fill-rule="evenodd" clip-rule="evenodd" d="M57 39.252v-2.5a2.5 2.5 0 0 0-2.5-2.5h-25a2.5 2.5 0 0 0-2.5 2.5v14.25h30v-11.75z"/>
+    </g>
+    <defs>
+        <clipPath id="ba77jzfw9a">
+            <path fill="#fff" transform="translate(22 22.002)" d="M0 0h40v40H0z"/>
+        </clipPath>
+    </defs>
+</svg>
