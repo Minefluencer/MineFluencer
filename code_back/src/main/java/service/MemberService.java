@@ -6,6 +6,8 @@ import java.util.*;
 
 public interface MemberService {
 
+	
+		public int idCheck(String id);
 		MemberVO selectOne(MemberVO vo);
 		List<MemberVO> imgOne(String string);
 		int insert(MemberVO vo);
