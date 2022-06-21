@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -55,9 +56,15 @@ public class MemberController{
 	FirstnameService Fservice;
 	@Autowired
 	YtubeService Yservice;
+
 	
 	int cnt = 0 ;
-	
+	@RequestMapping(value = "/interestCheck")
+	public ModelAndView interestCheck(ModelAndView mv) {
+		mv.setViewName("member/interestForm");
+		return mv;
+	} 
+
 	//login
 	@RequestMapping(value = "/loginf")
 	public ModelAndView loginf(ModelAndView mv) {
@@ -160,13 +167,13 @@ public class MemberController{
 	
 	
 	// join
-	@RequestMapping(value = {"/joinf","/t"}, method = RequestMethod.GET)
+	@RequestMapping(value = "/joinf", method = RequestMethod.GET)
 	public ModelAndView joinf(ModelAndView mv,HttpServletRequest request,MemberVO vo) {
 		List<FirstnameVO> nickname = Fservice.givenick();
 		mv.addObject("apple", nickname.get(cnt).getNick_name()); // 닉네임 넣어주기
-		
 		mv.setViewName("member/join");
 		return mv;
+		
 	}
 	
 	@RequestMapping(value = "/join" , method = RequestMethod.POST)
@@ -174,11 +181,13 @@ public class MemberController{
 	public ModelAndView join (ModelAndView mv, HttpServletRequest request, MemberVO vo)throws Exception {
 		vo.setEmail(vo.getEmail().replace("%40","@"));
 		List<FirstnameVO>nickname = Fservice.givenick();
+		
+		
 		if(Service.insert(vo)>0) {
 			Fservice.countUpdate(nickname.get(cnt).getNick_name());
 			cnt++;
 			mv.addObject("result", "200");
-			mv.setViewName("member/login");
+			mv.setViewName("member/interestForm");
 		}else {
 			mv.addObject("result", "201");
 			mv.setViewName("member/join");
@@ -188,24 +197,26 @@ public class MemberController{
 		
 	}
 	
+	@RequestMapping(value="/idCheck",method=RequestMethod.POST)
+	@ResponseBody
+	public int idCheck(HttpServletRequest req,MemberVO vo) throws Exception{
+		System.out.println(vo.getId());
+		int result = Service.idCheck(vo.getId());//중복아이디 있으면 1, 없으면 0
+		System.out.println(result);
+		return result;
+			
+	}
 	
 	
 	// 아직 미사용
-	@RequestMapping(value = "/idDupCheck", method = RequestMethod.GET)
-	public ModelAndView idDupCheck(ModelAndView mv, MemberVO vo) {
-		mv.addObject("newId",vo.getId());
-		vo = Service.selectOne(vo);
-		if(vo != null) {
-			// 사용 불가능 id 존재
-			mv.addObject("idUse","F");
-		}else {
-			// 사용 가능 id 존재
-			mv.addObject("idUse","T");
-		}
-		mv.setViewName("member/idDupCheck");
-		return mv;
-	} // idDupCheck
-	
+	/*
+	 * @RequestMapping(value = "/idDupCheck", method = RequestMethod.GET) public
+	 * ModelAndView idDupCheck(ModelAndView mv, MemberVO vo) {
+	 * mv.addObject("newId",vo.getId()); vo = Service.selectOne(vo); if(vo != null)
+	 * { // 사용 불가능 id 존재 mv.addObject("idUse","F"); }else { // 사용 가능 id 존재
+	 * mv.addObject("idUse","T"); } mv.setViewName("member/idDupCheck"); return mv;
+	 * } // idDupCheck
+	 */
 	
 
 	

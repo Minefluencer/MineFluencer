@@ -16,10 +16,10 @@
 			<div class="form_box">
 				<h1>회원가입</h1>
 				<div class="line"></div>
-				<form action="join" method="post" id ="joinFormd">
+				<form action="join" method="post">
 					<div class="input_box">
-						<p>아이디</p>
-						<input type="text" name="id" id="id" placeholder="아이디을 입력해주세요." autocomplete="off" />
+						<p>아이디</p><font id="idcheck" size=2></font>
+						<input type="text" name="id" id="id" class="input_id" placeholder="이메일을 입력해주세요." autocomplete="off" />
 						<div class="check_text">
 							<span id="id_check"></span>
 						</div>
@@ -44,23 +44,17 @@
 							<input type="text" name="email" id="email" autocomplete="off" />
 							<p>@</p>
 							<select name="com" id="com">
-								<option value="naver.com">naver.com</option>
-								<option value="google.com">google.com</option>
-								<option value="daum.net">daum.net</option>
-								<option value="kakao.com">kakao.com</option>
+								<option value="naver">naver.com</option>
+								<option value="google">google.com</option>
+								<option value="daum">daum.net</option>
+								<option value="kakao">kakao.com</option>
 							</select>
 						</div>
 						<div class="check_text">
 							<span id="email_check"></span>
 						</div>
 					</div>
-					<div class="input_box">
-						<p>닉네임</p>
-						<input type="text" name="nick_name" id="nick_name" value ="${apple}" readonly />
-						<div class="check_text">
-							<span id="name_check">자동으로 부여 된 닉네임 입니다.</span>
-						</div>
-					</div>
+					
 					<div class="input_box">
 						<p>생년월일</p>
 						<input
@@ -89,6 +83,13 @@
 							</div>
 						</div>
 					</div>
+					<div class="input_box">
+						<p>닉네임</p>
+						<input type="text" name="nick_name" id="nick_name" value ="${apple}" readonly />
+						<div class="check_text">
+							<span id="name_check">자동으로 부여 된 닉네임 입니다.</span>
+						</div>
+					</div>
 					<div class="input_box color_box">
 						<p>좋아하는 색은?</p>
 						<select name="color" id="color">
@@ -100,11 +101,12 @@
 							<span>아이디 | 비밀번호 찾기에 도움이 됩니다.</span>
 						</div>
 					</div>
-					<button id="submit_btn" type = "button">회원가입</button>
+					<button type="submit" id="submit_btn">회원가입</button>
 				</form>
 			</div>
 		</div>
 		<script src="resources/myLib/jquery-3.2.1.min.js"></script>
 		<script src="resources/myLib/join/form.js"></script>
+		<script src="resources/myLib/join/idCheck.js"></script>
 	</body>
 </html>

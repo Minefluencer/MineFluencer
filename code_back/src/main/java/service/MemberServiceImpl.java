@@ -16,6 +16,11 @@ public class MemberServiceImpl implements MemberService{
 	MemberMapper mapper;
 	
 	@Override
+	public int idCheck(String id) {	
+		return mapper.idCheck(id);
+	}
+	
+	@Override
 	public List<MemberVO> imgOne(String string) {
 		return mapper.imgOne(string);
 	}
