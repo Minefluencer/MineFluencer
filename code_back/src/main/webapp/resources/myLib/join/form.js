@@ -12,7 +12,6 @@ $('#id').keyup(function() {
 
 $('#id').focusout(function() {
 	
-	console.log($('#id').val())
 	$.ajax({
 		url : 'idCheck',
 		type: 'post',
@@ -75,6 +74,7 @@ $('#birthday').keyup(function() {
 	}
 });
 
+
 $('#submit_btn').click(() => {
 	var formData = {
 		id: $('#id').val(),
@@ -92,13 +92,9 @@ $('#submit_btn').click(() => {
 		charset: "UTF-8",
 		data: formData,
 		success: ((result) => {
-			if (result == '200')
-				alert('회원가입이 되었습니다.');
-			window.open('interestCheck', "_self");
 		}),
 		error: ((err) => {
 			id.focus();
-			console.log(err)
 		})
 	});
 });

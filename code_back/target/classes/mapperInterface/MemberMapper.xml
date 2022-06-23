@@ -33,4 +33,7 @@
 		from member
 		where id=#{id}
 	</select>
+	<update id="update" parameterType="hashmap">
+	update member set interest=#{interest} where id=#{id}
+	</update>
 </mapper>

@@ -19,7 +19,8 @@
 	on a.name = b.name
 	where b.job like (select concat(substr(#{interest},1,2),"%")as interest 
 	from member 
-	where interest is not null)
+	where interest is not null
+	limit 1)
 	order by subscribe desc
   </select>
   	

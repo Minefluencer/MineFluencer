@@ -2,8 +2,6 @@ package com.influencer.model;
 
 import java.util.List;
 
-import java.util.Map;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -13,8 +11,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,25 +23,7 @@ import service.MemberService;
 import service.YtubeService;
 import vo.FirstnameVO;
 import vo.MemberVO;
-/*
- * 2022 - 05 - 26
- * Last update 최성림
- * login 
- * logout
- * check(idGet, pwGet)
- * */
 import vo.YtubeVO;
-
-
-
-/**
- * 2022-06-05
- * @author ChoiSungRim
- * Client interest에 따른 Ytube Image 출력 (home.jsp)
- * Id Get, Pw Get 구현 완료 ( 새창 페이지 띄우는거 만들면 그곳으로 Json해서 전달 )
- * coding convention = 1가지 조건,반복은 띄어쓰기, 2가지 이상 조건 or 반복은 붙여쓰기 // 매개변수는 한칸씩 띄우되, @annotation 의 경우는 단락을 나눔
- * 회원가입 Ajax를 통해 전달받은 값으로 insert 구현완료
- * */
 
 @Controller
 public class MemberController{
@@ -59,7 +37,31 @@ public class MemberController{
 
 	
 	int cnt = 0 ;
-	@RequestMapping(value = "/interestCheck")
+	@RequestMapping(value = "/interest",method = RequestMethod.POST)
+	@ResponseBody
+	public ModelAndView interest (ModelAndView mv, MemberVO vo, HttpServletRequest request, 
+								  @RequestParam(value="valueArrTest[]") List<String> chbox )throws Exception {
+		
+		HttpSession session = request.getSession(false);
+		String id = (String) session.getAttribute("id");
+		String interest ="";
+		HashMap<String,String> aa =new HashMap<String,String>();
+
+		aa.put("id", id);
+		for (int i=0 ; i<chbox.size() ; i++ ) {
+			if(i!=chbox.size()-1)
+				interest +=chbox.get(i)+",";
+			else
+				interest +=chbox.get(i);
+		}
+		aa.put("interest",interest);
+		Service.update(aa);
+		mv.setViewName("/");
+		return mv;
+		
+	}
+	
+	@RequestMapping(value = "/interestCheck",method = RequestMethod.POST)
 	public ModelAndView interestCheck(ModelAndView mv) {
 		mv.setViewName("member/interestForm");
 		return mv;
@@ -76,7 +78,7 @@ public class MemberController{
 	public ModelAndView login(ModelAndView mv, HttpServletRequest request, RedirectAttributes attr, MemberVO vo, YtubeVO vo1) {
 		String password = request.getParameter("pw"); // 입력한 비밀번호
 		vo = Service.selectOne(vo); // vo에 저장된 비밀번호
-		
+		System.out.println("out"+vo);
 		int i = 1; // 전달할 namespace
 		int listNum = 0; // 불러올 listNumber
 		
@@ -160,7 +162,6 @@ public class MemberController{
 
 		MemberVO password = Service.getAll(map);
 		mv.addObject(password.getPassword()); // 비밀번호찾기
-		System.out.println(password.getPassword());
 		mv.setViewName("member/pwGet");
 		return mv;
 	}
@@ -179,20 +180,18 @@ public class MemberController{
 	@RequestMapping(value = "/join" , method = RequestMethod.POST)
 	@ResponseBody
 	public ModelAndView join (ModelAndView mv, HttpServletRequest request, MemberVO vo)throws Exception {
+		HttpSession session = request.getSession();
 		vo.setEmail(vo.getEmail().replace("%40","@"));
 		List<FirstnameVO>nickname = Fservice.givenick();
-		
-		
 		if(Service.insert(vo)>0) {
 			Fservice.countUpdate(nickname.get(cnt).getNick_name());
-			cnt++;
-			mv.addObject("result", "200");
-			mv.setViewName("member/interestForm");
+			session.setAttribute("id",vo.getId());
+			mv.addObject("result",200);
+			mv.setViewName("jsonView");
 		}else {
-			mv.addObject("result", "201");
-			mv.setViewName("member/join");
+			mv.addObject("result",201);
+			mv.setViewName("jsonView");
 		}
-		System.out.println(mv);
 		return mv;
 		
 	}
@@ -200,26 +199,9 @@ public class MemberController{
 	@RequestMapping(value="/idCheck",method=RequestMethod.POST)
 	@ResponseBody
 	public int idCheck(HttpServletRequest req,MemberVO vo) throws Exception{
-		System.out.println(vo.getId());
 		int result = Service.idCheck(vo.getId());//중복아이디 있으면 1, 없으면 0
-		System.out.println(result);
 		return result;
 			
 	}
-	
-	
-	// 아직 미사용
-	/*
-	 * @RequestMapping(value = "/idDupCheck", method = RequestMethod.GET) public
-	 * ModelAndView idDupCheck(ModelAndView mv, MemberVO vo) {
-	 * mv.addObject("newId",vo.getId()); vo = Service.selectOne(vo); if(vo != null)
-	 * { // 사용 불가능 id 존재 mv.addObject("idUse","F"); }else { // 사용 가능 id 존재
-	 * mv.addObject("idUse","T"); } mv.setViewName("member/idDupCheck"); return mv;
-	 * } // idDupCheck
-	 */
-	
-
-	
-	
 
 }

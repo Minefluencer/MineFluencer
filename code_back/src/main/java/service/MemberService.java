@@ -6,7 +6,7 @@ import java.util.*;
 
 public interface MemberService {
 
-	
+		int update(HashMap<String,String> aa);
 		public int idCheck(String id);
 		MemberVO selectOne(MemberVO vo);
 		List<MemberVO> imgOne(String string);
