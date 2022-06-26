@@ -20,8 +20,8 @@
 								<img src="resources/image/logo.svg" alt="마인플루언서" /><span id="mine">MINE<span>플루언서</span></span>
 							</h1>
 							<ul>
-								<li><a href="#">찜 목록</a></li>
-								<li><a href="#">랭킹</a></li>
+								<li><a href="mylistf">찜 목록</a></li>
+								<li><a href="rankf">랭킹</a></li>
 								<li><a href="#">About</a></li>
 								<c:if test="${Login_Name == '최성림'}">
 									<li><a href="ytube">index</a></li>
@@ -54,7 +54,7 @@
 				                    <h1 class=hidden>햄버거 메뉴 회원 정보</h1>
 				                	<div id="hamInfo_default">
 				                		<c:if test="${empty Login_Id}">
-											<span style="font-size:2rem">로그인을 먼저 해주세요</span>
+											<span style="font-size:2rem; display:flex;">로그인을 먼저 해주세요</span>
 										</c:if>
 									</div>
 									<div id="hamInfo_login">

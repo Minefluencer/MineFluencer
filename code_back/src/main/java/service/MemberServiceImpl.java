@@ -30,7 +30,6 @@ public class MemberServiceImpl implements MemberService{
 	}
 	@Override
 	public MemberVO selectOne(MemberVO vo) {
-		System.out.println(mapper.selectOne(vo));
 		return mapper.selectOne(vo);
 	}
 	@Override

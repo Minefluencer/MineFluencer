@@ -78,7 +78,6 @@ public class MemberController{
 	public ModelAndView login(ModelAndView mv, HttpServletRequest request, RedirectAttributes attr, MemberVO vo, YtubeVO vo1) {
 		String password = request.getParameter("pw"); // 입력한 비밀번호
 		vo = Service.selectOne(vo); // vo에 저장된 비밀번호
-		System.out.println("out"+vo);
 		int i = 1; // 전달할 namespace
 		int listNum = 0; // 불러올 listNumber
 		
@@ -145,7 +144,6 @@ public class MemberController{
 
 		MemberVO id = Service.getAll(map);
 		mv.addObject(id.getId()); // 아이디찾기
-		System.out.println(id.getId());
 		mv.setViewName("member/idGet");
 		return mv;
 	}
