@@ -38,29 +38,4 @@ public class RankingController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/category")
-	public ModelAndView category(ModelAndView mv,HttpServletRequest request,MemberVO vo
-								 ,HttpServletResponse response
-								 ,@RequestParam("value")String value) {
-		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession(false);
-		if(session != null && session.getAttribute("Login_Id") != null) {
-			mv.addObject("category",yservice.category(value));
-			mv.setViewName("jsonView");
-		}else
-			mv.setViewName("member/login");
-		return mv;
-	}
-	@RequestMapping(value = "/rankall")
-	public ModelAndView rankall(ModelAndView mv,HttpServletRequest request,MemberVO vo, HttpServletResponse response) {
-		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession(false);
-		if(session != null && session.getAttribute("Login_Id") != null) {
-			mv.addObject("allytuber",yservice.selectList());
-			mv.setViewName("jsonView");
-		}
-		else
-			mv.setViewName("member/login");
-		return mv;
-	}
 }
