@@ -190,6 +190,38 @@ main > .now_popularity > .now_right > .pop_card > .pop_text {
 	color: var(--han-purple);
 }
 
+/* Swiper */
+.swiper2 {
+	width: 100%;
+	background-color: red;
+	overflow: hidden;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	display: none;
+}
+
+.category {
+	position: relative;
+}
+
+.arrow_left {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform: rotate(180deg);
+	width: 5rem;
+	height: 5rem;
+}
+
+.arrow_right {
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	width: 5rem;
+	height: 5rem;
+}
+
 .increase > .main_banner > h1 > span {
 	font-weight: bold;
 }
