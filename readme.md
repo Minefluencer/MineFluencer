@@ -1,8 +1,4 @@
-# 마인플루언서
-
 # MINE플루언서
-
-![logo.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cdb88280-90da-4d59-8ff1-cd6c19388696/logo.png)
 
 ## 나의 취향에 맞는 인플루언서를 만나다!
 
