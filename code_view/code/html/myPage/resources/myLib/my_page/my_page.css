@@ -13,7 +13,6 @@ footer {
 /* My page Top */
 main {
     width: 130rem;
-    height: 72.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,10 +68,8 @@ main {
 /* My page bottom */
 .details_wrap {
     width: 130rem;
-    height: 49.2rem;
     flex-grow: 0;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 6rem;
@@ -99,8 +96,6 @@ main {
 }
 
 .categories {
-    width: 35rem;
-    height: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +135,7 @@ main {
 /* 내 정보 상세 */
 .info_details {
     width: 77rem;
-    height: inherit;
+    height: 49.2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
