@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="resources/myLib/reset.css" />
     <link rel="stylesheet" href="resources/myLib/header.css" />
     <link rel="stylesheet" href="resources/myLib/footer.css" />
+    <link rel="stylesheet" href="resources/myLib/hamburger.css" />
     <link rel="stylesheet" href="resources/myLib/ranking/ranking.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 
 <body>
     <header>
-
+		<jsp:include page="../module/header.jsp" />
     </header>
     <main>
         <nav>
@@ -30,26 +32,25 @@
                 </div>
             </div>
             <div class="category_wrap">
-                <ul>
-                    <li><img src="resources/image/ic_arrow.svg" alt="왼쪽 이동" class="arrow arrow_left" /></li>
-                    <li class="category_scroll">
-                        <ul>
-                            <li id="c1" class="btn20px"><span class="text">개발</span></li>
-                            <li id="c2" class="btn20px"><span class="text">게임</span></li>
-                            <li id="c3" class="btn20px"><span class="text">동물</span></li>
-                            <li id="c4" class="btn20px on"><span class="text">먹방</span></li>
-                            <li id="c5" class="btn20px"><span class="text">뷰티</span></li>
-                            <li id="c6" class="btn20px"><span class="text">여행</span></li>
-                            <li id="c7" class="btn20px"><span class="text">요리</span></li>
-                            <!-- <li id="c8" class="btn20px"><span>운동</span></li>
-                            <li id="c9" class="btn20px"><span>음악</span></li>
-                            <li id="c10" class="btn20px"><span>주식</span></li>
-                            <li id="c11" class="btn20px"><span>키즈</span></li>
-                            <li id="c12" class="btn20px"><span>패션</span></li> -->
-                            <!-- 스와이퍼 사용시 pagination 버튼(ex배너 아래의 점 세개)도 함께 적용해야 할듯-->
+                <ul class="swiper">
+                    <li class=""><img src="resources/image/ic_arrow.svg" alt="왼쪽 이동" class="swiper-button-prev arrow arrow_left" /></li>
+                    <li class="swiper category_scroll">
+                        <ul class="swiper-wrapper minef_swiper">
+                            <li id="c1" class="swiper-slide btn20px"><span class="text">개발</span></li>
+                            <li id="c2" class="swiper-slide btn20px"><span class="text">게임</span></li>
+                            <li id="c3" class="swiper-slide btn20px"><span class="text">동물</span></li>
+                            <li id="c4" class="swiper-slide btn20px"><span class="text">먹방</span></li>
+                            <li id="c5" class="swiper-slide btn20px"><span class="text">뷰티</span></li>
+                            <li id="c6" class="swiper-slide btn20px"><span class="text">여행</span></li>
+                            <li id="c7" class="swiper-slide btn20px"><span class="text">요리</span></li>
+                            <li id="c8" class="swiper-slide btn20px"><span class="text">운동</span></li>
+                            <li id="c9" class="swiper-slide btn20px"><span class="text">음악</span></li>
+                            <li id="c10" class="swiper-slide btn20px"><span class="text">주식</span></li>
+                            <li id="c11" class="swiper-slide btn20px"><span class="text">키즈</span></li>
+                            <li id="c12" class="swiper-slide btn20px"><span class="text">패션</span></li>
                         </ul>
                     </li>
-                    <li><img src="resources/image/ic_arrow.svg" alt="오른쪽 이동" class="arrow arrow_right" /></li>
+                    <li class=""><img src="resources/image/ic_arrow.svg" alt="오른쪽 이동" class="swiper-button-next arrow arrow_right" /></li>
                 </ul>
             </div>
         </nav>
@@ -121,11 +122,11 @@
         </div>
         <div class="list_wrap">
             <h3 class="hidden">인기 TOP4 이하</h3>
-            <!-- 반복 -->
+            <!-- 반복 QueryString? // click foreach? -->
             <c:forEach var = "ranky" varStatus = "list_vs" begin ="3" items ="${allytuber}">
             <div class="list_item">
                 <span>${ranky.seq}</span>
-                <div id="rank_4"><!-- id = rank_(숫자)-->
+                <div id="rank_${ranky.seq}"><!-- id = rank_(숫자)-->
                     <div class="influencer_profile">
                         <img src="${ranky.image}" alt="프로필사진">
                         <div class="details">
@@ -144,9 +145,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 클릭시 mylist에 추가-->
+                    <!-- 클릭시 mylist에 추가(수정사항)-->
                     <div class="mine">
-                        <a href="#">
+                        <a href='#' id="cc">
                             <span class="hidden">찜 하기</span>
                             <img src="resources/image/ic_heart-0.svg">
                         </a>
@@ -160,10 +161,27 @@
         </div>
     </main>
     <footer>
-
+		<jsp:include page="../module/footer.jsp" />
     </footer>
     <script src="resources/myLib/jquery-3.2.1.min.js"></script>
 	<script src="resources/myLib/ranking/ranking.js"></script>
+	<script src="resources/myLib/header.js"></script>
+	<script src="https://unpkg.com/swiper@8.2.6/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 6,
+            // slidesPerView: auto,
+            spaceBetween: 40,
+            loop: false,
+            
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
 </body>
 
 </html>

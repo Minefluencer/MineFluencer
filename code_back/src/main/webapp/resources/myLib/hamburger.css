@@ -1,4 +1,18 @@
 @charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+:root {
+	--vivid-sky-blue: #3cf;
+	--manatee: #9c9fab;
+	--cultured: #f4f4f6;
+	--eerie-black: #1c1d21;
+	--light-gray: #d3d4d9;
+	--black-coral: #676b79;
+	--han-purple: #33f;
+	--ghost-white: #fbfbff;
+	--lavender-web: #e7e7ff;
+	--white: #fff;
+	--rusty-red: #de3c4b;
+}
 
 #hamMenu {
     position: absolute;
@@ -117,4 +131,15 @@
 
 .hamIcon.active-1 span:nth-of-type(3) {
   opacity: 0;
+}
+#hamInfo_login {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#hamInfo_login > span#join{
+	background-color: var(--han-purple);
+}
+#hamInfo_login > span#join>a{
+	color:#fff
 }

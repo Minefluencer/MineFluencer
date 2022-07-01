@@ -9,6 +9,7 @@
 		<title>Card</title>
 		<link rel="stylesheet" href="resources/myLib/ranking/my_list.css" />
 		<link rel="stylesheet" href="resources/myLib/reset.css" />
+		<script src="resources/myLib/jquery-3.2.1.min.js"></script>
 	</head>
 	<body></body>
 </html>
