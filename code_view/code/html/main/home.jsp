@@ -56,8 +56,8 @@
 						</h1>
 						<div class="now_controll">
 							<div class="now_arrow">
-								<img src="resources/image/ic_arrow.svg" alt="왼쪽으로 이동" class="arrow arrow_left arrow_active" />
-								<img src="resources/image/ic_arrow.svg" alt="오른쪽으로 이동" class="arrow arrow_right" />
+								<img src="../image/ic_arrow.svg" alt="왼쪽으로 이동" class="arrow now_arrow_left arrow_active" />
+								<img src="../image/ic_arrow.svg" alt="오른쪽으로 이동" class="arrow now_arrow_right" />
 							</div>
 							<div class="now_more">
 								<span><a href="#">더 보기</a></span>
