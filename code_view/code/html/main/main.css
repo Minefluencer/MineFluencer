@@ -206,6 +206,29 @@ main > .now_popularity > .now_right > .pop_card > .pop_text {
 	position: relative;
 }
 
+.category > .category_list > .swiper-slide > input {
+	display: none;
+}
+
+.category_list > .swiper-slide > label {
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.category_list > .swiper-slide > label:hover {
+	transform: scale(1.1);
+}
+
+.category_list > .swiper-slide > label > p {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.active_item {
+	color: var(--han-purple);
+}
+
 .arrow_left {
 	position: absolute;
 	top: 0%;
