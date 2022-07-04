@@ -1,0 +1,108 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+		'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+	--vivid-sky-blue: #3cf;
+	--manatee: #9c9fab;
+	--cultured: #f4f4f6;
+	--eerie-black: #1c1d21;
+	--light-gray: #d3d4d9;
+	--black-coral: #676b79;
+	--han-purple: #33f;
+	--ghost-white: #fbfbff;
+	--lavender-web: #e7e7ff;
+	--white: #fff;
+	--rusty-red: #de3c4b;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal_box {
+	width: 70rem;
+	height: 57rem;
+	box-shadow: 0 10px 35px 0 rgba(28, 29, 33, 0.05);
+	background-color: var(--ghost-white);
+	border-radius: 1rem;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+.logo > a > img {
+	width: 13.4rem;
+	margin: 10rem 0;
+}
+
+.text_box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.text_box > h1 {
+	font-size: 3.2rem;
+	color: var(--han-purple);
+	margin-bottom: 3rem;
+}
+
+.text_box > p {
+	font-size: 2.2rem;
+	color: var(--manatee);
+	font-weight: normal;
+	margin-bottom: 8rem;
+}
+
+.text_box > p > span {
+	color: var(--black-coral);
+	font-weight: bold;
+}
+
+.btn_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn_box > button {
+	width: 24.5rem;
+	height: 6.8rem;
+	cursor: pointer;
+	margin: 0 0.5rem;
+	border-radius: 1rem;
+	border: none;
+	outline: none;
+}
+
+.btn_box > button > a {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+#about_btn {
+	background-color: transparent;
+	outline: var(--han-purple) 1px solid;
+}
+
+#about_btn > a {
+	color: var(--han-purple);
+}
+
+#login_btn {
+	background-color: var(--han-purple);
+}
+
+#login_btn > a {
+	color: var(--white);
+}
