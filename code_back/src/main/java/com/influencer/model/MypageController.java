@@ -29,7 +29,7 @@ public class MypageController {
 		public ModelAndView mypagef(ModelAndView mv,HttpServletRequest request) {
 			HttpSession session = request.getSession(false);
 			if(session != null && session.getAttribute("Login_Id") != null) {
-				mv.setViewName("mylist/my_list");
+				mv.setViewName("mylist/my_page");
 			}
 			else
 				mv.setViewName("member/login");
