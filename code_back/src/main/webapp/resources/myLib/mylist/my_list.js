@@ -19,6 +19,10 @@ value.forEach(el=>{
 		$.ajax({
 			url:"interlist",
 			type:"get",
+			async : "true",
+			cache :"false",
+			datatype:"json",
+			contenttype:"json",
 			data:{val : val},
 			success:(list)=>{
 				result.innerHTML = '';

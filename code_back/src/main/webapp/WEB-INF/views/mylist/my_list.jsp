@@ -14,9 +14,7 @@
 		<link rel="stylesheet" href="resources/myLib/mylist/my_list.css" />
 	</head>
 	<body id="main_container" onload="init()">
-		<header>
 			<jsp:include page="../module/header.jsp" />
-		</header>
 		<div class="container">
 			<h1 id="user">${Login_Name}<!--데이터--><span>님의 찜 목록</span></h1>
 			<div class="main">
@@ -93,9 +91,7 @@
 				</div>
 			</div>
 		</div>
-		<footer>
 			<jsp:include page="../module/footer.jsp" />
-		</footer>
 		<script src="resources/myLib/jquery-3.2.1.min.js"></script>
 		<script src="resources/myLib/mylist/my_list.js"></script>
 	</body>
