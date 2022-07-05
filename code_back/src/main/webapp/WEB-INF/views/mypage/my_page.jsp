@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,24 +15,67 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
-    <header></header>
+    <header>
+    </header>
     <main>
         <div class="profile_info">
             <img src="resources/image/ic_profile.svg" class="내 프로필사진">
             <div class="user_detail">
-                <span>자랑하는강아지</span>
-                <span>honggildong@gmail.com</span>
+                <span>${Login_Name}</span>
+                <span>${Login_Email}</span>
             </div>
-            <div class="btn12px">내 정보 수정</div>
+            <div class="btn12px"><a href="#">내 정보 수정</a></div>
         </div>
         <div class="details_wrap">
             <div class="categories_strip">
                 <span>관심있는 카테고리</span>
                 <div class="categories">
                     <!-- 관심사 있는 만큼 반복 -->
-                    <div class="item_wrap"><img src="resources/image/music-1.svg" alt="아이콘"><span>음악</span></div>
-                    <div class="item_wrap"><img src="resources/image/develop-1.svg" alt="아이콘"><span>개발</span></div>
-                    <div class="item_wrap"><img src="resources/image/kids-1.svg" alt="아이콘"><span>키즈</span></div>
+                    <c:if test="${mlist.interest ne null}">
+                    	<c:forEach begin="0" var="inter" items="${mlist.interest}">
+                    		<c:choose>
+                    			<c:when test="${inter == '음악'}">
+	                    			<div class="item_wrap"><img src="resources/image/music-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '운동'}">
+	                    			<div class="item_wrap"><img src="resources/image/traning-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '여행'}">
+	                    			<div class="item_wrap"><img src="resources/image/travel-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '뷰티'}">
+	                    			<div class="item_wrap"><img src="resources/image/beauty-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '패션'}">
+	                    			<div class="item_wrap"><img src="resources/image/fashion-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '먹방'}">
+	                    			<div class="item_wrap"><img src="resources/image/food-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '요리'}">
+	                    			<div class="item_wrap"><img src="resources/image/cook-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '게임'}">
+	                    			<div class="item_wrap"><img src="resources/image/game-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '개발'}">
+	                    			<div class="item_wrap"><img src="resources/image/develop-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '동물'}">
+	                    			<div class="item_wrap"><img src="resources/image/animal-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '주식'}">
+	                    			<div class="item_wrap"><img src="resources/image/stock-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+                    			<c:when test="${inter == '키즈'}">
+	                    			<div class="item_wrap"><img src="resources/image/kids-1.svg" alt="아이콘"><span>${inter}</span></div>
+	                    		</c:when>
+	                    	</c:choose>
+                    	</c:forEach>
+                    </c:if>
+                    <c:if test="${mlist.interest eq null}">
+                    	<div class="item_wrap"><img src="resources/image/ic_sad.svg" alt="아이콘"><span><pre>관심사가 없습니다!</pre></span></div>
+                    </c:if>
                 </div>
             </div>
             <div class="info_details">
@@ -50,11 +94,11 @@
                     </div>
                     <div class="my_info">
                         <span class="hidden">내용</span>
-                        <span>홍길동</span>
-                        <span>남</span>
-                        <span>1999-01-01</span>
-                        <span>honggildong</span>
-                        <span>honggildong@gmail.com</span>
+                        <span>${mlist.nick_name}</span>
+                        <span>${mlist.gender}</span>
+                        <span>${mlist.birth}</span>
+                        <span>${mlist.id}</span>
+                        <span>${mlist.email}</span>
                     </div>
                 </div>
             </div>

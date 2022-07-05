@@ -10,7 +10,7 @@
 			<nav>
 				<div class="nav_left">
 					<h1>
-						<img src="resources/image/logo.svg" alt="마인플루언서" /><span id="mine">MINE<span>플루언서</span></span>
+						<a href=home><img src="resources/image/logo.svg" alt="마인플루언서" /><span id="mine">MINE<span>플루언서</span></span></a>
 					</h1>
 					<ul>
 						<li><a href="mylistf">찜 목록</a></li>
@@ -62,7 +62,7 @@
 		                <div id="hamBottom">
 		               		<h1 class="hidden">햄버거 메뉴 리스트</h1>
 		                    <ul>
-		                        <li><a href="#"><span>마이페이지</span></a></li>
+		                        <li><a href="mypagef"><span>마이페이지</span></a></li>
 		                        <li><a href="mylistf"><span>찜 목록</span></a></li>
 		                        <li><a href="rankf"><span>랭킹</span></a></li>
 		                        <li><a href="#"><span>About</span></a></li>
