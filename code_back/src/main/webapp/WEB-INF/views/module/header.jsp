@@ -10,7 +10,7 @@
 			<nav>
 				<div class="nav_left">
 					<h1>
-						<a href=home><img src="resources/image/logo.svg" alt="마인플루언서" /><span id="mine">MINE<span>플루언서</span></span></a>
+						<img src="resources/image/logo.svg" alt="마인플루언서" /><span id="mine">MINE<span>플루언서</span></span>
 					</h1>
 					<ul>
 						<li><a href="mylistf">찜 목록</a></li>
