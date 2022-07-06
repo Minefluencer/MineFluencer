@@ -1,0 +1,295 @@
+header {
+    width: 100%;
+    height: 9rem;
+    background-color: yellowgreen;
+}
+
+footer {
+    width: 100%;
+    height: 33rem;
+    background-color: yellowgreen;
+}
+
+.container {
+    display: flex;
+    gap: 12rem;
+    margin-left: 31rem;
+    margin-bottom: 8rem;
+}
+
+/* 사이드메뉴 */
+nav>ul {
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 10rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .6rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 2rem 0 rgba(28, 29, 33, 0.04);
+    background-color: var(--white);
+}
+
+.list li {
+    width: 18rem;
+    height: 5.4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.6rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* 사이드메뉴 이벤트 */
+.list>li:hover span {
+    font-weight: bold;
+    color: var(--han-purple);
+}
+
+li.on {
+    background-color: var(--lavender-web);
+}
+
+li.on span {
+    font-weight: bold;
+    color: var(--han-purple);
+}
+
+/* 회원탈퇴 */
+ul>li:nth-of-type(2) {
+    width: 18rem;
+    height: 5.4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.6rem 2rem;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+/* 관심사 수정 */
+main {
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6rem;
+    margin-top: 5rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.heading>span {
+    font-size: 1.8rem;
+    color: var(--manatee);
+}
+
+.heading>span:nth-of-type(1) {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--eerie-black);
+}
+
+/* 관심사 */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+.items_container {
+    width: 70rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* 체크박스 */
+input[type^="c"] {
+    display: none;
+}
+
+.check_box {
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top: 6.3%;
+    right: 6.3%;
+    background: url(../../image/ic_tick-circle.svg) no-repeat;
+}
+
+input[type^="c"]:checked+label .check_box {
+    background: url(../../image/ic_tick-circle-1.svg) no-repeat;
+}
+
+/* 12가지 관심사 */
+label {
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border-radius: 1rem;
+    outline: solid .1rem var(--cultured);
+    outline-offset: -.1rem;
+}
+
+label div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+    margin: auto;
+}
+
+label>div>span:nth-of-type(1) {
+    width: 8.4rem;
+    height: 8.4rem;
+}
+
+label span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--manatee);
+}
+
+/* checked 이벤트 */
+input[type="checkbox"]:checked+label {
+    box-shadow: 0 .5rem 2rem 0 rgba(51, 51, 255, 0.04);
+    background-color: var(--white);
+    outline: solid .1rem var(--han-purple);
+    outline-offset: -.1rem;
+}
+
+input[type="checkbox"]:checked+label span {
+    color: var(--han-purple);
+}
+
+button {
+    width: 50rem;
+    height: 6.8rem;
+    border-radius: 1rem;
+    background-color: var(--han-purple);
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* unselected icons */
+label[for="c1"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -70.5rem -.5rem;
+}
+
+label[for="c2"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -50.5rem -.5rem;
+}
+
+label[for="c3"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -40.5rem -.5rem;
+}
+
+label[for="c4"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -110.5rem -.5rem;
+}
+
+label[for="c5"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -30.5rem -.5rem;
+}
+
+label[for="c6"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -60.5rem -.5rem;
+}
+
+label[for="c7"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -10.5rem -.5rem;
+}
+
+label[for="c8"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -80.5rem -.5rem;
+}
+
+label[for="c9"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -.5rem -.5rem;
+}
+
+label[for="c10"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -20.5rem -.5rem;
+}
+
+label[for="c11"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -90.5rem -.5rem;
+}
+
+label[for="c12"]>div>span:nth-of-type(1) {
+    background: url(../../image/iconSprite.png) no-repeat -100.5rem -.5rem;
+}
+
+/* selected icons */
+input[type^="c"]:checked+label[for="c1"]>div>span:nth-of-type(1) {
+    background-position-x: -190.5rem;
+}
+
+input[type^="c"]:checked+label[for="c2"]>div>span:nth-of-type(1) {
+    background-position-x: -170.5rem;
+}
+
+input[type^="c"]:checked+label[for="c3"]>div>span:nth-of-type(1) {
+    background-position-x: -160.5rem;
+}
+
+input[type^="c"]:checked+label[for="c4"]>div>span:nth-of-type(1) {
+    background-position-x: -230.5rem;
+}
+
+input[type^="c"]:checked+label[for="c5"]>div>span:nth-of-type(1) {
+    background-position-x: -150.5rem;
+}
+
+input[type^="c"]:checked+label[for="c6"]>div>span:nth-of-type(1) {
+    background-position-x: -180.5rem;
+}
+
+input[type^="c"]:checked+label[for="c7"]>div>span:nth-of-type(1) {
+    background-position-x: -130.5rem;
+}
+
+input[type^="c"]:checked+label[for="c8"]>div>span:nth-of-type(1) {
+    background-position-x: -200.5rem;
+}
+
+input[type^="c"]:checked+label[for="c9"]>div>span:nth-of-type(1) {
+    background-position-x: -120.5rem;
+}
+
+input[type^="c"]:checked+label[for="c10"]>div>span:nth-of-type(1) {
+    background-position-x: -140.5rem;
+}
+
+input[type^="c"]:checked+label[for="c11"]>div>span:nth-of-type(1) {
+    background-position-x: -210.5rem;
+}
+
+input[type^="c"]:checked+label[for="c12"]>div>span:nth-of-type(1) {
+    background-position-x: -220.5rem;
+}

@@ -1,0 +1,302 @@
+header {
+	width: 100%;
+	height: 9rem;
+	background-color: yellowgreen;
+}
+
+footer {
+	width: 100%;
+	height: 33rem;
+	background-color: yellowgreen;
+}
+
+.container {
+	display: flex;
+	gap: 12rem;
+	margin-left: 31rem;
+	margin-bottom: 8rem;
+}
+
+/* 사이드메뉴 */
+nav>ul {
+	width: 22rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	margin-top: 10rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: .6rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 .5rem 2rem 0 rgba(28, 29, 33, 0.04);
+	background-color: var(--white);
+}
+
+.list li {
+	width: 18rem;
+	height: 5.4rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	padding: 1.6rem 2rem;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+/* 사이드메뉴 이벤트 */
+.list>li:hover span {
+	font-weight: bold;
+	color: var(--han-purple);
+}
+
+li.on {
+	background-color: var(--lavender-web);
+}
+
+li.on span {
+	font-weight: bold;
+	color: var(--han-purple);
+}
+
+/* 회원탈퇴 */
+ul>li:nth-of-type(2) {
+	width: 18rem;
+	height: 5.4rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1.6rem 2rem;
+	margin: auto;
+	border-radius: 1rem;
+}
+
+/* 내 정보 수정 */
+main {
+	width: 50rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6rem;
+	margin-top: 5rem;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
+}
+.heading>span{
+	font-size: 1.8rem;
+	color: var(--manatee);
+}
+.heading>span:nth-of-type(1) {
+	font-size: 2.4rem;
+	font-weight: bold;
+	color: var(--eerie-black);
+}
+
+/* form 공통 */
+.form_wrap {
+	width: 100%;
+	/* height: 89.8rem; */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	/* gap: 8rem; */
+	border-radius: 1rem;
+}
+
+.form_input {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+div>p {
+	margin-bottom: 1.2rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--black-coral);
+}
+
+input {
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+input::placeholder {
+	color: var(--light-gray);
+}
+
+/* 닉네임 변경 */
+.nick_box {
+	display: flex;
+	gap: 1rem;
+}
+
+.nick_box>input {
+	width: 38rem;
+	height: 6.4rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	background-color: var(--cultured);
+	font-size: 2rem;
+	color: var(--eerie-black);
+}
+
+.nick_box>button {
+	width: 11rem;
+	height: 6.4rem;
+	border-radius: 1rem;
+	background-color: var(--white);
+	outline: solid .1rem var(--han-purple);
+	outline-offset: -.1rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--han-purple);
+	cursor: pointer;
+}
+
+.id_box>input {
+	width: 100%;
+	height: 6.4rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	background-color: var(--cultured);
+	font-size: 2rem;
+	color: var(--eerie-black);
+}
+
+/* 이메일 변경 */
+.email_box {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.email_box>input {
+	width: 22.5rem;
+	height: 6.4rem;
+	padding: 1.6rem 2rem;
+	border-radius: 1rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--han-purple);
+}
+
+.email_box>select {
+	width: 22.5rem;
+	height: 6.4rem;
+	padding: 1.6rem 2rem;
+	border-radius: 1rem;
+	border: none;
+	outline: none;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--han-purple);
+}
+
+.email_box>input:focus {
+	border: 0.1rem solid var(--han-purple);
+}
+
+.email_box>select:focus {
+	border: 0.1rem solid var(--han-purple);
+}
+
+/* 생년월일 변경 */
+#birthday {
+	width: 100%;
+	height: 6.4rem;
+	padding: 1.6rem 2rem;
+	border-radius: 1rem;
+	background-color: var(--white);
+	font-size: 2rem;
+	color: var(--eerie-black);
+}
+
+input[type='date']::before {
+	content: attr(data-placeholder);
+	width: 100%;
+	font-size: 2rem;
+	color: var(--light-gray);
+}
+
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+	display: none;
+}
+
+/* 성별 변경 */
+.gender_box {
+	height: 6.4rem;
+	display: flex;
+}
+
+.gender_box>div {
+	display: flex;
+	align-items: center;
+	margin-right: 3.8rem;
+}
+
+.gender_box>div>input {
+	width: 1.8rem;
+	height: 1.8rem;
+
+	border: solid .2rem var(--light-gray);
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+}
+
+.gender_box>div>input:checked {
+	background-color: var(--han-purple);
+	border: none;
+}
+
+.gender_box>div>label {
+	font-size: 2rem;
+	margin-left: 1.6rem;
+	cursor: pointer;
+}
+
+/* 좋아하는 색 변경 */
+.color_box>select {
+	width: 100%;
+	height: 6.4rem;
+	padding: 2rem;
+	border: none;
+	outline: none;
+	font-size: 2rem;
+	color: var(--han-purple);
+	font-weight: bold;
+	border-radius: 1rem;
+}
+
+.color_box>select:focus {
+	border: 0.1rem solid var(--han-purple);
+}
+
+form>button {
+	width: 100%;
+	height: 6.8rem;
+	margin-top: 5rem;
+	background-color: var(--han-purple);
+	border-radius: 1rem;
+	border: none;
+	outline: none;
+	font-size: 2.2rem;
+	font-weight: bold;
+	color: var(--white);
+	cursor: pointer;
+}
