@@ -1,0 +1,179 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+		'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+	--vivid-sky-blue: #3cf;
+	--manatee: #9c9fab;
+	--cultured: #f4f4f6;
+	--eerie-black: #1c1d21;
+	--light-gray: #d3d4d9;
+	--black-coral: #676b79;
+	--han-purple: #33f;
+	--ghost-white: #fbfbff;
+	--lavender-web: #e7e7ff;
+	--white: #fff;
+	--rusty-red: #de3c4b;
+}
+
+header {
+	width: 100%;
+	height: 9rem;
+	background-color: yellowgreen;
+}
+
+footer {
+	width: 100%;
+	height: 33rem;
+	background-color: yellowgreen;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.info {
+	width: 130rem;
+	height: 27rem;
+	margin-top: 5rem;
+	position: relative;
+	margin-bottom: 6rem;
+}
+
+.info > .line {
+	width: 100%;
+	height: 8rem;
+	background-color: var(--lavender-web);
+	border-radius: 1rem;
+	margin-bottom: 5rem;
+}
+
+.info_text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.info_text > .inf_img {
+	border-radius: 50%;
+}
+
+.info_text > .inf_img > img {
+	width: 24rem;
+	height: 24rem;
+	border-radius: 50%;
+	border: solid 5px var(--han-purple);
+	position: absolute;
+	bottom: 0%;
+}
+
+.inf_info {
+	margin-left: 30rem;
+}
+
+.inf_info > h1 {
+	font-size: 3.2rem;
+	margin-bottom: 2.6rem;
+}
+
+.inf_info > p {
+	font-size: 1.8rem;
+	width: fit-content;
+	padding: 0.8rem;
+	border-radius: 1rem;
+	color: var(--han-purple);
+	font-weight: 600;
+	background-color: var(--lavender-web);
+}
+
+.inf_list {
+	position: absolute;
+	right: 0;
+	gap: 0.9rem;
+	border-radius: 2.5rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.3rem 1.8rem;
+	background-color: var(--han-purple);
+}
+
+.inf_list > p {
+	font-size: 1.8rem;
+	color: var(--white);
+	font-weight: bold;
+}
+
+.inf_many {
+	width: 130rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5rem;
+}
+
+.inf_many_box {
+	width: 63rem;
+	height: 20rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 35px 0 rgba(28, 29, 33, 0.04);
+}
+
+.inf_many_box > h1 {
+	font-size: 4.8rem;
+}
+
+.inf_many_box > p {
+	font-size: 1.8rem;
+	color: var(--manatee);
+	font-weight: 500;
+}
+
+.inf_about_text {
+	width: 124rem;
+	margin-bottom: 11rem;
+}
+
+.inf_about_text > h1 {
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
+}
+
+.inf_about_text > p {
+	color: var(--black-coral);
+	font-size: 2.2rem;
+}
+
+.inf_platform {
+	width: 123rem;
+	margin-bottom: 11rem;
+}
+
+.inf_platform > h1 {
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
+}
+
+.inf_platform > .platforms_boxs {
+	display: flex;
+}
+
+.inf_platform > .platforms_boxs > .platforms_box {
+	width: 12rem;
+	height: 12rem;
+	background-color: var(--white);
+	box-shadow: 0 10px 35px 0 rgba(28, 29, 33, 0.04);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-right: 6rem;
+}
