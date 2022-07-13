@@ -22,7 +22,7 @@
 					</div>
 					<div class="modal_btn">
 						<button id="cancel">취소</button>
-						<button id="delete"><a href="#">삭제하기</a></button>
+						<button id="delete"><a href="delete">삭제하기</a></button>
 					</div>
 				</div>
 			</div>

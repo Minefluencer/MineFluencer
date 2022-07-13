@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 수정</title>
+    <link rel="stylesheet" href="resources/myLib/reset.css" />
+    <link rel="stylesheet" href="resources/myLib/header.css" />
+    <link rel="stylesheet" href="resources/myLib/footer.css" />
+    <!-- <link rel="stylesheet" href="resources/myLib/my_page/edit_info.css" /> -->
+    <link rel="stylesheet" href="resources/myLib/my_page/edit_pw.css" />
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <ul class="list">
+                        <li class=""><span>내 정보 수정</span> </li>
+                        <li class="on"><span>비밀번호 수정</span> </li>
+                        <li class=""><span>관심사 수정</span></li>
+                    </ul>
+                </li>
+                <li><a href=""><span>회원탈퇴</span></a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="heading">
+                <span>비밀번호 수정</span>
+                <span>비밀번호를 수정할 수 있습니다.</span>
+            </div>
+            <div class="form_wrap">
+                <form action="#" method="post">
+                    <div class="form_input">
+                        <div>
+                            <p>비밀번호</p>
+                            <input type="password" name="password" id="password" />
+                            <div class="check_text">
+                                <span id="pw_check"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>새 비밀번호</p>
+                            <input type="password" name="password" id="password" placeholder="새 비밀번호를 입력해주세요."
+                                autocomplete="off" />
+                            <div class="check_text">
+                                <span id="pw_check"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>새 비밀번호 확인</p>
+                            <input type="password" name="password_re" id="password_re" placeholder="새 비밀번호를 다시 입력해주세요."
+                                autocomplete="off" />
+                            <div class="check_text">
+                                <span id="pw_re_check"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button>수정하기</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

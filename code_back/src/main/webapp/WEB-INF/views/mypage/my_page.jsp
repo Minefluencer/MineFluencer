@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="resources/myLib/footer.css" />
     <link rel="stylesheet" href="resources/myLib/my_page/my_page.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="resources/myLib/hamburger.css" />
 </head>
 <body>
-    <header>
-    </header>
+	<header>
+		<jsp:include page="../module/header.jsp" />
+	</header>
+	
+    
+    
     <main>
         <div class="profile_info">
             <img src="resources/image/ic_profile.svg" class="내 프로필사진">
@@ -24,7 +29,7 @@
                 <span>${Login_Name}</span>
                 <span>${Login_Email}</span>
             </div>
-            <div class="btn12px"><a href="#">내 정보 수정</a></div>
+            <div class="btn12px"><a href="mypagef?jcode=U">내 정보 수정</a></div>
         </div>
         <div class="details_wrap">
             <div class="categories_strip">
@@ -104,6 +109,37 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="../module/footer.jsp" />
+    </footer>
+    <script>
+
+    $(document).ready(function () {
+    	let flag = true;
+    	$(".hamIcon").click(function () {
+    		if(flag) {
+    			flag = false;
+    			$("#hamMenu").addClass("open");
+    		}else {
+    			flag = true;
+    			$("#hamMenu").removeClass("open");
+    		}
+    	    
+    	});
+    	
+    var burger = $('.hamIcon');
+
+    burger.each(function(index){
+      var $this = $(this);
+      
+      $this.on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active-' + (index+1));
+      })
+    });
+    });
+    </script>
+    <script src="resources/myLib/jquery-3.2.1.min.js"></script>
+	<script src="resources/myLib/header.js"></script>
 </body>
 </html>
