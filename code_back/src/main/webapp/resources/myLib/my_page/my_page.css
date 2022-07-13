@@ -1,13 +1,13 @@
 header {
     width: 100%;
     height: 9rem;
-    background-color: yellowgreen;
+    background-color: var(--ghost-white);
 }
 
 footer {
     width: 100%;
     height: 33rem;
-    background-color: yellowgreen;
+    background-color: var(--light-gray);
 }
 
 /* My page Top */

@@ -92,9 +92,10 @@ header> .nav > nav{
 	display: flex;
 }
 
-.nav_left > ul > li {
+.nav > nav> .nav_left > ul > li {
 	margin-left: 8rem;
 }
+
 
 .nav_left > ul > li > a {
 	font-size: 1.8rem;

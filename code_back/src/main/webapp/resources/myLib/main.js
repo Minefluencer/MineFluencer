@@ -21,6 +21,7 @@ $('.category_label').click(function () {
 			type:"get",
 			data:{value : value},
 			success : result =>{
+				console.log(result.result[0].subscribe.substring(0,result.result[0].subscribe.length-4))
 				changeblock = `
 				<div class="now_left">
 					<h1>
@@ -49,7 +50,7 @@ $('.category_label').click(function () {
                                       	${result.result[0].subscribe.substring(0,result.result[0].subscribe.length-4)}만명
 									</span>
                                     <div class="pop_hashtag">
-                                        <span>#${value}</span>
+                                        <span>#${value}</span> <span>#패션</span> <span>#여행</span>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +64,7 @@ $('.category_label').click(function () {
                                       	${result.result[1].subscribe.substring(0,result.result[1].subscribe.length-4)}만명
 									</span>
                                     <div class="pop_hashtag">
-                                        <span>#${value}</span>
+                                        <span>#${value}</span> <span>#패션</span> <span>#여행</span>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +78,7 @@ $('.category_label').click(function () {
                                       	${result.result[2].subscribe.substring(0,result.result[2].subscribe.length-4)}만명
 									</span>
 								<div class="pop_hashtag">
-									<span>#${value}</span>
+									<span>#${value}</span> <span>#패션</span> <span>#여행</span>
 								</div>
 							</div>
 						</div>
