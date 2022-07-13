@@ -18,6 +18,14 @@ public class MemberServiceImpl implements MemberService{
 	public int update(HashMap<String,String> aa) {
 		return mapper.update(aa);
 	}
+	@Override
+	public int updateU(MemberVO vo) {
+		return mapper.updateU(vo);
+	}
+	@Override
+	public int updateP(MemberVO vo) {
+		return mapper.updateP(vo);
+	}
 	
 	@Override
 	public int idCheck(String id) {	
