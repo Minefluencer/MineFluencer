@@ -37,5 +37,14 @@
 	update member set interest=#{interest} where id=#{id}
 	</update>
 	
+	<update id="updateU">
+	update member set email = #{email},nick_name=#{nick_name},birth=#{birth},gender=#{gender},
+	color=#{color} 
+	where id=#{id}
+	</update>
+	<update id="updateP">
+	update member set password = #{password}
+	where id=#{id}
+	</update>
 	
 </mapper>
