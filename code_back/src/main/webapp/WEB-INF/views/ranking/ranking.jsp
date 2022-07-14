@@ -73,8 +73,9 @@
                         </div>
                         <div class="hashtag">
                             <span>#${tytuber.job}</span>
-                            <span>#운동</span>
-                            <span>#20대_인기</span>
+                            <c:forEach begin="1" end="1" items="${ingi}" var="ingi">
+                            	<span>#${ingi.age}0대 인기</span>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>
@@ -93,8 +94,9 @@
                         </div>
                         <div class="hashtag">
                             <span>#${oytuber.job}</span>
-                            <span>#운동</span>
-                            <span>#20대_인기</span>
+                            <c:forEach begin="0" end="0" items="${ingi}" var="ingi">
+                            	<span>#${ingi.age}0대 인기</span>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>
@@ -113,8 +115,9 @@
                         </div>
                         <div class="hashtag">
                             <span>#${hytuber.job}</span>
-                            <span>#운동</span>
-                            <span>#20대_인기</span>
+                            <c:forEach begin="2" end="2" items="${ingi}" var="ingi">
+                            	<span>#${ingi.age}0대 인기</span>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>
@@ -140,8 +143,11 @@
                             </div>
                             <div class="hashtag">
                                 <span>#${ranky.job}</span>
-                                <span>#태그2</span>
-                                <span>#연령_인기</span>
+                                <c:forEach begin="3" items="${ingi}" var="ingi">
+	                                <c:if test="${ingi.name eq ranky.name}">
+	                            		<span>#${ingi.age}0대 인기</span>
+	                            	</c:if>
+	                            </c:forEach>
                             </div>
                         </div>
                     </div>

@@ -138,11 +138,13 @@
 					<!-- 콘텐츠 출력공간 -->
 					<c:if test="${empty Login_Id || interest eq null}">
 						<c:forEach var="lista" begin="0" end="2" items="${list}" >
+						<a href = "detailf">
 							<div class="pop_card active">
 								<img src="${lista.image}" alt="인플루언서" />
 								<div class="pop_text">
 									<h3 id="card">${lista.name}</h3>
-									<span>구독자						
+									<span>
+									구독자						
 								         ${lista.subscribe.substring(0,lista.subscribe.length()-4)}만명
 							        </span>
 									<div class="pop_hashtag">
@@ -150,11 +152,13 @@
 									</div>
 								</div>
 							</div>
+							</a>
 						</c:forEach>
 					</c:if>
 					<c:if test="${not empty Login_Id && interest ne null}">
 						<c:forEach var="lista" begin="0" end="2" items="${list}" >
-							<div class="pop_card active">
+						<a href = "detailf">
+							<div class="pop_card active ">
 								<img src="${lista.image}" alt="인플루언서" />
 								<div class="pop_text">
 									<h3 id="card">${lista.name}</h3>
@@ -166,6 +170,7 @@
 									</div>
 								</div>
 							</div>
+							</a>
 						</c:forEach>
 					</c:if>
 				</div>
