@@ -86,8 +86,8 @@ public class MypageController {
 			HttpSession session = request.getSession(false);
 			String password = request.getParameter("password"); // form에서 입력한 원래 비밀번호
 			vo = Mservice.selectOne(vo); // vo에 저장된 비밀번호
-			System.out.println(password);
-			System.out.println(newP);
+			System.out.println("pass"+password);
+			System.out.println("newp"+newP);
 			System.out.println(vo.getPassword());
 			
 			if(vo.getPassword().equals(password)) {
@@ -122,6 +122,7 @@ public class MypageController {
 		@ResponseBody
 		public ModelAndView updateI(ModelAndView mv, MemberVO vo, HttpServletRequest request, 
 									  @RequestParam(value="valueArrTest[]") List<String> chbox,@RequestParam(value="id") String id)throws Exception {
+			
 			System.out.println(chbox);
 			System.out.println(id);
 			String interest ="";

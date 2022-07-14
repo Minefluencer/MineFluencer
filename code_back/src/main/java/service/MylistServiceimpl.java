@@ -34,6 +34,11 @@ public class MylistServiceimpl implements MylistService {
 	public List<MageCriVO> poplevel() {
 		return mapper.poplevel();
 	}
+	@Override
+	public List<MageCriVO> allcount() {
+		// TODO Auto-generated method stub
+		return mapper.allcount();
+	}
 	
 }
 

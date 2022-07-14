@@ -14,4 +14,5 @@ public interface MylistService {
 	int myinsert (HashMap<String,String> map);
 	int mydelete (HashMap<String,String> map);
 	List<MageCriVO> poplevel();
+	List<MageCriVO> allcount();
 }

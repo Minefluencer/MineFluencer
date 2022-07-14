@@ -48,7 +48,8 @@ public class RankingController {
 		if(session != null && session.getAttribute("Login_Id") != null) {
 			List<MageCriVO> list = new ArrayList<>();
 			list.addAll(MYservice.poplevel());
-			mv.addObject("ingi",list);		
+			System.out.println(list);
+			mv.addObject("ingi",list);
 			mv.addObject("allytuber",Yservice.selectList());
 			mv.addObject("oytuber",Yservice.selectList().get(0));
 			mv.addObject("tytuber",Yservice.selectList().get(1));

@@ -63,4 +63,12 @@
 	where trim(job) = #{interest}
 	order by seq
   </select>
+  
+  <select id ="infdetail" resultType = "vo.YtubeVO">
+  	select * from(select a.seq seq, a.name name, a.subscribe, a.introduce, b.job, a.image, b.youtube_addr, b.insta_addr, b.default_addr
+	from ytube a, address b
+	where a.name= b.name
+	order by b.job) as a
+	where name = #{name};
+  </select>
   </mapper>

@@ -4,8 +4,20 @@ public class MageCriVO {
 	 private String name;
 	 private int age;
 	 private int count;
+	 private int allcount;
 	 
 	 
+	 
+	public int getAllcount() {
+		return allcount;
+	}
+
+
+	public void setAllcount(int allcount) {
+		this.allcount = allcount;
+	}
+
+
 	public String getName() {
 		return name;
 	}
@@ -38,8 +50,11 @@ public class MageCriVO {
 
 	@Override
 	public String toString() {
-		return "MageCriVO [name=" + name + ", age=" + age + ", count=" + count + "]";
+		return "MageCriVO [name=" + name + ", age=" + age + ", count=" + count + ", allcount=" + allcount + "]";
 	}
+
+
+	
 
 
 	 

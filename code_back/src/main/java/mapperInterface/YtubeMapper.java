@@ -14,7 +14,7 @@ public interface YtubeMapper {
 	int insert (YtubeVO vo);
 	int countup (String name);
 	int countdown (String name);
-	
+	List<YtubeVO> infdetail(String value);
 	
 	
 }

@@ -13,7 +13,7 @@ public interface YtubeService {
 	List<YtubeVO> intera(String interest);
 	List<YtubeVO> detail (String string);
 	List<YtubeVO> interlist (HashMap<String,String> map);
-	
+	List<YtubeVO> infdetail(String value);
 	int insert(YtubeVO vo);
 	int countup (String name);
 	int countdown (String name);

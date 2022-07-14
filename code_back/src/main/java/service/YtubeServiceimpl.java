@@ -53,4 +53,8 @@ public class YtubeServiceimpl implements YtubeService{
 	public int countup(String name) {
 		return mapper.countup(name);
 	}
+	@Override
+	public List<YtubeVO> infdetail(String value) {
+		return mapper.infdetail(value);
+	}
 }
